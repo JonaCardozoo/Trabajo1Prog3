@@ -38,7 +38,7 @@ public class Profesor extends Persona implements Comparable<Profesor>  {
 
 	@Override
 	public String toString() {
-		return "Profesor Legajo= " + Legajo + ", Titulo=  " + Titulo +  "Edad= "+Edad + "\n";
+		return "[ ID = " + Id  + "  Profesor: Nombre =  " + Nombre + " -  Apellido = " + Apellido +  " - Legajo= " + Legajo + " -  Titulo=  " + Titulo +  " -  Edad= "+ Edad + "]" + "\n";
 	}
 	
 }

@@ -1,6 +1,6 @@
 
 public class Persona {
-	
+
 	public int getId() {
 		return Id;
 	}
@@ -40,28 +40,25 @@ public class Persona {
 	public void setDni(long dni) {
 		Dni = dni;
 	}
-	
+
 	int Id;
 	String Apellido;
 	String Nombre;
 	int Edad;
 	long Dni;
-	
+
 	public Persona(int id, String apellido, String nombre, int edad, long dni) {
-		
+
 		Id = id;
 		Apellido = apellido;
 		Nombre = nombre;
 		Edad = edad;
 		Dni = dni;
 	}
-	
-	
-
 
 	@Override
 	public String toString() {
-		return "Persona Id=" + Id + "- Apellido= " + Apellido + "- Nombre= " + Nombre + "- Edad= " + Edad + "- Dni= " + Dni
-				+ "/n";
+		return "Persona Id= " + Id + "- Apellido= " + Apellido + "- Nombre= " + Nombre + "- Edad= " + Edad + "- Dni= "
+				+ Dni + "/n";
 	}
 }

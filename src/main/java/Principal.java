@@ -4,31 +4,46 @@ import java.util.List;
 public class Principal {
 
 	public static void main(String[] args) {
-		GenerarLista generar = new GenerarLista();
-		
-		List<Persona> listaPersona = new ArrayList<Persona>();
-		
-		listaPersona.addAll(generar.getListaAlumnos());
-		listaPersona.addAll(generar.getListaProfesor());
-		
-		
-		System.out.println(listaPersona);
-		System.out.println("--MAYOR PROMEDIO--");
-		System.out.println(generar.obtenerAlumnoConMayorPromedio(listaPersona));
-		System.out.println("--MENOR PROMEDIO--");
-		System.out.println(generar.obtenerAlumnoConMenorPromedio(listaPersona));
-		System.out.println("--ALUMNOS CON PROMEDIO MAYOR A 7--");
-		System.out.println(generar.obtenerAlumnosPromedioMayorA7(listaPersona));
-		System.out.println("--PROFESORES INGENIEROS EN SISTEMAS--");
-		System.out.println(generar.obtenerProfesoresIngSis(listaPersona));
-		System.out.println("--PROFESORES POR EDAD--");
-		generar.ordenarYMostrarProfesoresPorEdad(listaPersona);
-		System.out.println("--SUMA DE EDADES DE PROFESORES--");
-		System.out.println(generar.MostrarEdad(listaPersona));
-		System.out.println("--PROMEDIO TOTAL--");
-		System.out.println(generar.PromedioTotal(listaPersona));
-		System.out.println("--PROMEDIO MEJORES NOTAS--");
-		System.out.println(generar.PromedioTotalM7(listaPersona) );
-	}
+GenerarLista generar = new GenerarLista();
+        
+        List<Persona> listaAlumnos = new ArrayList<>();
+        List<Persona> listaProfesores = new ArrayList<>();
+        
+        listaAlumnos.addAll(generar.getListaAlumnos());
+        listaProfesores.addAll(generar.getListaProfesor());
+        
+        System.out.println("--PUNTO A, ALUMNOS ORDENADOS POR APELLIDO, SI SE REPITE, ORDENADOS APELLIDO Y NOMBRE--");
+        System.out.println(" ");
+        System.out.println("Lista de Alumnos:");
+        System.out.println(listaAlumnos);
+        System.out.println(" ");
+        System.out.println("--PUNTO B, PROFESORES ORDENADOS POR LEGAJO--");
+        System.out.println(" ");
+        System.out.println("Lista de Profesores:");
+        System.out.println(listaProfesores);
+        System.out.println("--PUNTO C - IDENTIFICAR EL MAYOR PROMEDIO DE TODA LA LISTA--");
+        System.out.println(generar.obtenerAlumnoConMayorPromedio(listaAlumnos));
+        System.out.println(" ");
+        System.out.println("--PUNTO D - IDENTIFICAR EL MENOR PROMEDIO DE TODA LA LISTA--");
+        System.out.println(generar.obtenerAlumnoConMenorPromedio(listaAlumnos));
+        System.out.println(" ");
+        System.out.println("--PUNTO E - ALUMNOS CON PROMEDIO MAYOR A 7--");
+        System.out.println(generar.obtenerAlumnosPromedioMayorA7(listaAlumnos));
+        System.out.println(" ");
+        System.out.println("--PUNTO F - IDENTIFICAR PROFESORES INGENIEROS EN SISTEMAS--");
+        System.out.println(generar.obtenerProfesoresIngSis(listaProfesores));
+        System.out.println(" ");
+        System.out.println("--PUNTO G - ORDENAR PROFESORES POR EDAD--");
+        generar.ordenarYMostrarProfesoresPorEdad(listaProfesores);
+        System.out.println(" ");
+        System.out.println("--PUNTO H - SUMA DE EDADES DE TODOS LOS PROFESORES--");
+        System.out.println(generar.MostrarEdad(listaProfesores));
+        System.out.println(" ");
+        System.out.println("-- PUNTO I - PROMEDIO TOTAL Y PROMEDIO MEJORES NOTAS--");
+        System.out.println(generar.PromedioTotal(listaAlumnos));
+        System.out.println(" ");
+        System.out.println("-- PUNTO I - PROMEDIO MEJORES NOTAS--");
+        System.out.println(generar.PromedioTotalM7(listaAlumnos) );
+    }
 
 }

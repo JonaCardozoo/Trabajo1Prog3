@@ -3,8 +3,7 @@ public class Alumno extends Persona implements Comparable<Alumno> {
 
 	@Override
 	public String toString() {
-		return "Alumno: Edad= " + Edad + " - Dni= " + Dni + " - Nombre= " + Nombre + " - Apellido= " + Apellido + " - numLE= "
-                + numLE + " - materiasAprobadas= " + materiasAprobadas + " - Promedio= " + Promedio + "\n";
+		return "[ ID = " + Id +  " - Edad= " + Edad + " - Dni= " + Dni + " - Nombre= " + Nombre + " - Apellido= " + Apellido + " - numLE= " + numLE + " - materiasAprobadas= " + materiasAprobadas + " - Promedio= " + Promedio + "]" + "\n";
 
 	}
 	int Edad;
@@ -82,12 +81,17 @@ public class Alumno extends Persona implements Comparable<Alumno> {
 		Promedio = promedio;
 	}
 	
+	
 	public int compareTo(Alumno alum) {
+		//comparar por apellido
 		int comparacion = this.Apellido.compareTo(alum.getApellido());
+		
 		if(comparacion!=0) {
 			return comparacion;
 		}
+		
 		if(comparacion ==0) {
+			//comparar por nombre por si se repite el apellido
 			return this.Nombre.compareTo(alum.Nombre);
 		}
 		return Integer.compare(this.Edad,alum.getEdad());
